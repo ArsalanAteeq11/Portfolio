@@ -1,0 +1,92 @@
+@import "../../styles/contants.scss";
+
+.wrapper {
+  background: #fff;
+  height: 100%;
+  .aboutMe {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem 0;
+    @media (max-width: $md) {
+      flex-wrap: wrap;
+    }
+    .image_container {
+      @media (max-width: $md) {
+        display: none;
+      }
+      @media (max-width: $lg) {
+        width: 40%;
+      }
+      width: 30%;
+      // background-color: #3432a8;
+      background: linear-gradient(
+      90deg,
+      rgba(0, 99, 158, 0.8) 35%, /* Darker tone */
+      rgba(0, 150, 210, 0.7) 100% /* Lighter tone */
+    );
+      clip-path: polygon(
+        20% 0%,
+        80% 0%,
+        100% 20%,
+        100% 80%,
+        80% 100%,
+        20% 100%,
+        0% 80%,
+        0% 20%
+      );
+      border-radius: 100px;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: relative;
+        top: 30px;
+        width: 100%;
+      }
+    }
+    .description {
+      width: 50%;
+      @media (max-width: $md) {
+        width: 100%;
+      }
+      span {
+        line-height: 40px;
+        font-size: 17px;
+      }
+      .about_activity {
+        list-style: none !important;
+        text-align: left !important;
+        padding-left: 2px !important;
+        @media (max-width: $sm) {
+          font-size: 1.1rem;
+          line-height: 40px;
+        }
+        line-height: 40px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .btn {
+        padding: 10px;
+        width: 120px !important;
+        margin-top: 20px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        background-color: #fff;
+      }
+    }
+    .skills {
+      width: 100%;
+      .skillsBar {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 10px;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

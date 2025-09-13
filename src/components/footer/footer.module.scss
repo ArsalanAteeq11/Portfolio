@@ -1,0 +1,30 @@
+.wrapper{
+    position: relative;
+    .container{
+        flex-direction: column;
+        gap: 10px;
+            .icons{
+                display: flex;
+                align-items: center;
+                .icon{
+                    height: 35px;
+                    width: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 10px;
+                    background: rgba(0, 99, 158, 0.8) 35% ;
+                    svg{
+                        color: #fff;
+                    }
+                }
+            }
+        .name{
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 14px;
+        }    
+    }
+}

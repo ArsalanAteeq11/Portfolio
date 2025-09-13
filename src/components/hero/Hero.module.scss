@@ -1,0 +1,87 @@
+@import "../../styles/contants.scss";
+
+.wrapper {
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    .upperElement {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+    .herolink {
+      @media (max-width: $sm), (max-width: $md) {
+        justify-content: center;
+      }
+      text-align: center;
+      display: flex;
+      text-decoration: none;
+    }
+
+    .person {
+      background-image: url("../splash.png");
+      background-repeat: no-repeat;
+      margin-top: 1rem;
+      background-size: contain;
+      img {
+        @media (max-width: $md) {
+          width: 34rem;
+          
+        }
+        @media (max-width: $sm) {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      
+    }
+    .upperElement {
+      
+      .primaryText {
+        text-align: start;
+        border-bottom: none !important;
+        .wave {
+          animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+          animation-duration: 2.1s; /* Change to speed up or slow down */
+          animation-iteration-count: infinite; /* Never stop waving :) */
+          transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+          display: inline-block;
+        }
+
+        @keyframes wave-animation {
+          0% {
+            transform: rotate(0deg);
+          }
+          10% {
+            transform: rotate(14deg);
+          } /* The following five values can be played with to make the waving more or less extreme */
+          20% {
+            transform: rotate(-8deg);
+          }
+          30% {
+            transform: rotate(14deg);
+          }
+          40% {
+            transform: rotate(-4deg);
+          }
+          50% {
+            transform: rotate(10deg);
+          }
+          60% {
+            transform: rotate(0deg);
+          } /* Reset for the last half to pause */
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+}
